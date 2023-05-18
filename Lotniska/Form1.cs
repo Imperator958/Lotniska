@@ -4,6 +4,7 @@ namespace Lotniska
     {
         Class1 load;
         public List<Class1> list = new List<Class1>();
+        public Class1 send;
         public Form1()
         {
             InitializeComponent();
@@ -29,17 +30,18 @@ namespace Lotniska
                 if (line != lines[0])
                 {
                     comboBox1.Items.Add(load.name);
-                    //var load2 = new Class2() { city = cell[0], district = cell[1], ICAO = cell[2], IATA = cell[3], name = cell[4], number_of_passengers = cell[5], change = cell[6] };
                     list.Add(load);
                 }
                 else
                 {
+                    send = load;
                     checkBox1.Text = load.city;
                     checkBox2.Text = load.district;
                     checkBox3.Text = load.ICAO;
                     checkBox4.Text = load.IATA;
                     checkBox5.Text = load.number_of_passengers;
                     checkBox6.Text = load.change;
+                    
                 }
             }
         }
@@ -49,5 +51,79 @@ namespace Lotniska
             Form2 form2 = new Form2(this);
             form2.Show();
         }
+
+        public string WhatInComboBox()
+        {
+            return comboBox1.GetItemText(comboBox1.SelectedItem);
+        }
+
+        public bool Checked1()
+        {
+            if(checkBox1.Checked == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool Checked2()
+        {
+            if (checkBox2.Checked == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool Checked3()
+        {
+            if (checkBox3.Checked == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool Checked4()
+        {
+            if (checkBox4.Checked == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool Checked5()
+        {
+            if (checkBox5.Checked == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool Checked6()
+        {
+            if (checkBox6.Checked == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
+
+    
 }

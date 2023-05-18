@@ -8,17 +8,12 @@ namespace Lotniska
 {
     public class Class1
     {
-        public string city;
-        public string district;
-        public string ICAO;
-        public string IATA;
-        public string name;
-        public string number_of_passengers;
-        public string change;
-    }
-
-    public class Class2 : Class1
-    {
-        
+        public string city { get; set; }
+        public string district { get; set; }
+        public string ICAO { get; set; }
+        public string IATA { get; set; }
+        public string name { get; set; }
+        public string number_of_passengers { get; set; }
+        public string change { get; set; }
     }
 }
